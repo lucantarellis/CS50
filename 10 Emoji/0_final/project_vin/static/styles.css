@@ -1,0 +1,554 @@
+/* ---------- Media queries ---------- */
+
+@media (min-width: 768px) {
+
+    /* -- Typos -- */
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    #contact_image {
+        display: flex !important;
+        width: 18rem;
+    }
+
+    #hamb {
+        display: none;
+    }
+
+    .hero_desk {
+        display: flex !important;
+        align-items: center;
+        justify-items: center;
+        padding: 0 3rem;
+        gap: 3rem;
+        margin-bottom: 4rem;
+        color: white;
+    }
+
+    .hero_desk > div:first-of-type {
+        width: 50%;
+    }
+
+    .hero_desk > div:first-of-type + div {
+        display: grid;
+        justify-items: center;
+    }
+
+    .hero_desk > div > img {
+        height: 22rem;
+    }
+
+    .hero_desk > div > div {
+        padding: 2rem 0 0 0;
+        width: 50%;
+    }
+
+    .hero {
+        display: none !important;
+    }
+
+    .cont-body.prod {
+        padding: 2rem 0 !important;
+        width: 70% !important;
+    }
+
+    .cont-body {
+        padding: 5rem 0;
+        display: flex !important;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .cont-body > div {
+        width: 45%;
+    }
+
+    nav {
+        padding: 1rem 3rem !important;
+        justify-content: initial !important;
+        gap: 2rem;
+    }
+
+    .menu-desk {
+        display: flex !important;
+        justify-content: space-between !important;
+        gap: 1rem;
+        color: white;
+        width: 100%;
+    }
+
+    .menu-desk > div:first-of-type {
+        display: flex;
+        width: fit-content;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .menu-desk > div > form {
+        width: fit-content !important;
+    }
+
+    .menu-desk > div:first-of-type > form > button {
+        font-size: 1rem;
+        text-decoration: underline;
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    .divider {
+        display: flex !important;
+        padding: 3rem !important;
+    }
+}
+
+/* ---------- Custom general styles ---------- */
+
+:root {
+    --primary: #022836;
+    --secondary: #06C1BF;
+    --tertiary: #036564;
+    --footer: #CBD8DC;
+    --l-grey: #C5C5C5;
+    --m-grey: #9F9F9F;
+    --d-grey: #6F6F6F;
+    --accent: #FDD7C9;
+    --background: radial-gradient(circle, rgba(3,54,73,1) 0%, rgba(2,40,54,1) 90%);
+}
+
+#contact_image {
+    display: none;
+}
+
+body {
+    margin: initial !important;
+    background: var(--background);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+footer {
+    display: grid;
+    background-color: var(--footer);
+    width: 100%;
+    padding: 2rem 1.5rem;
+    color: var(--primary);
+}
+
+footer > div:first-of-type {
+    margin-bottom: 2rem;
+}
+
+footer > i {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: grid;
+    width: 100%;
+    grid-gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+form > div > h3 {
+    margin-bottom: 1rem;
+}
+
+input, label {
+    display: block;
+}
+
+nav {
+    width: 100%;
+    padding: 1.5rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul > li:first-of-type {
+    margin-top: 0.5rem;
+}
+
+/* ---------- Font sizes and attributes ---------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.08rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: initial;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: initial;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+p {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: initial;
+}
+
+.helper {
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+}
+
+.link {
+    display: inherit;
+    height: 3.5rem;
+    color: var(--primary);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.sub {
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* ---------- Bootstrap edited components ---------- */
+
+.alert {
+    margin: 0 1.5rem 1rem 1.5rem;
+}
+
+.collapse {
+    color: white;
+    margin-top: 1rem;
+}
+
+.collapsing {
+    margin-top: 1rem;
+}
+
+.offcanvas {
+    padding: 1.5rem;
+    background-color: var(--primary);
+}
+
+.offcanvas-header {
+    /* estaba padding: initial */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Custom components ---------- */
+
+/* ------- Buttons ------- */
+
+.btn-primary {
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    border-radius: 1rem;
+    background: var(--secondary);
+    color: var(--primary);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    align-items: center;
+    border: solid 2px var(--tertiary);
+}
+
+.btn-primary.dark {
+    background: var(--primary);
+    color: white;
+    border: none !important;
+}
+
+.menu-btn {
+    display: flex;
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.btn-primary.outline {
+    background: none;
+    border: solid 2px white;
+    padding: 0 1rem;
+    color: white;
+}
+
+.btn-primary.text {
+    background: none;
+    padding: 0;
+    border: none;
+    color: white;
+}
+
+/* ------- Card ------- */
+
+.card {
+    margin: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    border-radius: 1rem;
+    color: var(--primary);
+}
+
+/* ------- Chip ------- */
+
+.chip {
+    padding: 0.25rem 1.5rem;
+    margin: 0.5rem 0;
+    color: black;
+    border: 2px solid var(--l-grey);
+    border-radius: 3.2rem;
+    background-color: white;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.35);
+}
+
+.chip > p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* ------- Containers ------- */
+
+.cont-centered {
+    display: flex;
+    padding: 0 1.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-centered > img {
+    max-width: 100%;
+}
+
+.cont-centered > div > p > i {
+    font-size: 1.125rem !important;
+}
+
+.cont-body {
+    padding: 3rem 1.5rem;
+    color: white;
+}
+
+.cont-body.prod {
+    padding: 0 1.5rem;
+}
+
+.cont-body > div {
+    margin-bottom: 1.5rem;
+}
+
+.cont-body > div:first-of-type + div + div {
+    margin-bottom: 1rem;
+}
+
+.cont-body.form {
+    padding: 0 1.5rem 3rem 1.5rem;
+}
+
+.cont-body.form > div > h3 {
+    margin-bottom: 1rem;
+}
+
+.cont-body.form > div > h4 {
+    margin-bottom: 0.5rem;
+}
+
+.cont-body.form > div > p {
+    margin-bottom: 0.5rem;
+}
+
+.cont-body.form > div:first-of-type + div > p {
+    margin-bottom: 1rem;
+}
+
+/* ------- Divider ------- */
+
+.divider {
+    display: grid;
+    gap: 1.5rem;
+    background: white;
+    padding: 2rem 1.5rem;
+    color: var(--primary)
+}
+
+.divider > div {
+    display: grid;
+    gap: 1rem;
+}
+
+.divider > div > div {
+    display: grid;
+    gap: 1rem;
+}
+
+.divider > div > img {
+    max-width: 50%;
+}
+
+/* ------- Forms ------- */
+
+.qty {
+}
+
+.qty > div > div {
+    display: flex;
+    gap: 1rem;
+}
+
+.qty > div > h4 {
+    margin-bottom: 1rem;
+}
+
+.home {
+    margin-bottom: 2rem;
+}
+
+/* ------- Hero ------- */
+
+.hero {
+    display: grid;
+    gap: 3rem;
+    justify-items: center;
+    margin-bottom: 4rem;
+    padding: 1rem 1.5rem;
+    color: white;
+}
+
+.hero > div > img {
+    height: 16rem;
+}
+
+.hero > div:first-of-type + div {
+    padding: 0rem;
+    width: 100%;
+}
+
+.hero > div > h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.hero_desk {
+    display: none;
+}
+
+/* ------- Icons ------- */
+
+.bi {
+    font-size: 1.5rem;
+}
+
+/* ------- Info ------- */
+
+.info {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+/* ------- Inputs ------- */
+
+input[type="radio"]:checked + label {
+    background: white;
+    color: var(--primary);
+}
+
+.inp {
+    border-radius: 12px;
+    background: white;
+    width: 100%;
+    height: 3rem;
+    border: 3px solid var(--m-grey);
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+}
+
+.inp.lg {
+    height: 10rem;
+}
+
+/* ------- Progress bar ------- */
+
+.progress {
+    background-color: initial;
+    height: 0.75rem;
+    box-shadow: inset 0 0 0 2px white;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.progress-bar {
+    background-color: white;
+}
+
+/* ----------------- Extras ----------------- */
+
+.circle {
+    background: var(--accent);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.vinbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vinbox > img {
+    width: 2.5rem;
+    height: fit-content;
+}
+
+.menu-desk {
+    display: none;
+}

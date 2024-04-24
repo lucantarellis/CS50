@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Name</th>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Quantity</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for updated_portfolio in updated_portfolio %}
+            <tr>
+                <td class="text-start">{{ updated_portfolio.stock_name }}</td>
+                <td class="text-start">{{ updated_portfolio.stock_symbol }}</td>
+                <td class="text-end">{{ updated_portfolio.quantity }}</td>
+                <td class="text-end">{{ updated_portfolio.price }}</td>
+                <td class="text-end">{{ updated_portfolio.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                <td class="border-0 text-end">{{ user_cash }}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
+                <td class="border-0 text-end">{{ total_cash }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

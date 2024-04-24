@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    orders
+{% endblock %}
+
+{% block main %}
+
+    <div class="cont-body bg">
+        <div>
+            <div>
+                <a href="/"><i id=back class="bi bi-arrow-left-short"></i> Go back</a>
+                <h1>My orders</h1>
+            </div>
+            <p>We save the information from all your past orders so you can check them out whenever you need to!</p>
+        </div>
+        <form class="prod-list" action="/orders" method="post">
+            {% for order in orders %}
+                <div class="card-prod-vert">
+                    <div>
+                        <p>Order #{{ order.id }}</p>
+                        <p>Store: {{ order.name }}</p>
+                        <p>Date: {{ order.date }}</p>
+                    </div>
+                    <div>
+                        <button class="btn-primary full" type="submit" name="order_id" value="{{ order.id }}">Go to order details</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </form>
+    </div>
+
+{% endblock %}

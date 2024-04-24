@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+        <div class="mb-3">
+            <p>A share of {{ stock.name }} ({{ stock.symbol }}) costs {{ stock.price | usd }}.</p>
+        </div>
+        <a class="btn btn-primary" href="https://lucantarellis-opulent-yodel-wq446xq95gwc56w5-5000.preview.app.github.dev/quote">Return</a>
+{% endblock %}

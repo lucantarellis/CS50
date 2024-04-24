@@ -1,0 +1,568 @@
+/* ---------- Media queries ---------- */
+
+@media (min-width: 768px) {
+
+    body {
+        margin: initial !important;
+        background-image: url("https://i.imgur.com/P7NjJh9.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #hamb {
+        display: none;
+    }
+
+    #check-table {
+        width: 100%;
+    }
+
+    /* ------- Button ------- */
+
+    .btn-primary.full {
+        width: -webkit-fill-available;
+        max-width: 21rem;
+    }
+
+    /* ------- Containers ------- */
+
+    .cont-body {
+        display: flex;
+        padding: 3rem 4rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        color: var(--primary);
+    }
+
+    .cont-body.home {
+        width: 40rem;
+        height: 40rem;
+    }
+
+    .cont-body.bg {
+        background-image: url("https://i.imgur.com/YNsZz7Z.jpg");
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    .prod-list {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .card.log {
+        padding: 1.5rem;
+        display: grid;
+        grid-gap: 1.5rem;
+        border-radius: 1rem;
+        color: var(--primary);
+        width: 24rem;
+    }
+
+    .card.log>form {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .card-prod {
+        display: flex;
+        padding: 1rem;
+        width: 19.5rem;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        border: solid 1px var(--bs-border-color-translucent);
+        border-radius: var(--bs-border-radius);
+    }
+
+    .card-prod>div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .card-prod>div>p:first-of-type {
+        font-weight: 700;
+        color: var(--primary)
+    }
+
+    .card-prod-vert {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        width: 19.5rem;
+        background: white;
+        gap: 1.5rem;
+        border: solid 1px var(--bs-border-color-translucent);
+        border-radius: var(--bs-border-radius);
+    }
+
+    .card-prod-vert>div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .card-prod-vert>div>p:first-of-type {
+        font-weight: 700;
+        color: var(--primary)
+    }
+
+    /* ------- Divider ------- */
+
+    .divider {
+        display: flex;
+        gap: 1.5rem;
+        background: var(--primary);
+        padding: 2rem 1.5rem;
+        color: white;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .divider.section {
+        flex-direction: row-reverse;
+    }
+
+    .divider>h4 {
+        margin-bottom: 0;
+    }
+
+    .card-div {
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+    }
+
+    .menu-desk {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav {
+        width: 100%;
+        padding: 1.5rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: normal;
+        background-color: white;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        margin: initial !important;
+        background-image: url("https://i.imgur.com/FijClOh.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    nav {
+        width: 100%;
+        padding: 1.5rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+    }
+
+    /* ------- Button ------- */
+
+    .btn-primary.full {
+        width: 100%;
+    }
+
+    /* ------- Containers ------- */
+
+    .cont-body {
+        padding: 2rem 1.5rem 4rem 1.5rem;
+        display: flex;
+        color: var(--primary);
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cont-body.bg {
+        background-image: url("https://i.imgur.com/YNsZz7Z.jpg");
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    .prod-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .card-prod {
+        display: flex;
+        padding: 1rem;
+        width: 19.5rem;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        border: solid 1px var(--bs-border-color-translucent);
+        border-radius: var(--bs-border-radius);
+    }
+
+    .card-prod>div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .card-prod>div>p:first-of-type {
+        font-weight: 700;
+        color: var(--primary)
+    }
+
+    .card-prod-vert {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        width: 19.5rem;
+        background: white;
+        gap: 1.5rem;
+        border: solid 1px var(--bs-border-color-translucent);
+        border-radius: var(--bs-border-radius);
+    }
+
+    .card-prod-vert>div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .card-prod-vert>div>p:first-of-type {
+        font-weight: 700;
+        color: var(--primary)
+    }
+
+    /* ------- Divider ------- */
+
+    .divider {
+        display: flex;
+        gap: 1.5rem;
+        background: var(--primary);
+        padding: 2rem 1.5rem;
+        color: white;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .divider.section {
+        flex-direction: row-reverse;
+        border-radius: var(--bs-border-radius);
+    }
+
+    .divider>h4 {
+        margin-bottom: 0;
+    }
+
+    .card-div {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .menu-desk {
+        display: none;
+    }
+}
+
+
+/* ---------- Custom general styles ---------- */
+
+:root {
+    --primary: #4A2120;
+    --secondary: #EF920F;
+    --tertiary: #CA6B00;
+    --footer: #D8C84F;
+    --l-grey: #C5C5C5;
+    --m-grey: #9F9F9F;
+    --d-grey: #6F6F6F;
+    --accent: #D8C84F;
+}
+
+#back {
+    font-size: 2rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+footer {
+    display: grid;
+    background-color: var(--footer);
+    width: 100%;
+    padding: 2rem 1.5rem;
+    color: var(--primary);
+}
+
+footer>div:first-of-type {
+    margin-bottom: 2rem;
+}
+
+footer>i {
+    font-size: 2.5rem !important;
+    margin-bottom: 1rem;
+}
+
+
+/* ---------- Font sizes and attributes ---------- */
+
+a {
+    display: flex;
+    color: var(--primary);
+    text-decoration: none;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin: initial;
+    letter-spacing: -0.15rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: initial;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: initial;
+}
+
+.link {
+    display: inherit;
+    height: 3.5rem;
+    color: var(--primary);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: underline;
+}
+
+.sub {
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* ---------- Bootstrap edited components ---------- */
+
+.alert {
+    margin: 1rem 1.5rem 0rem 1.5rem;
+}
+
+.collapse {
+    color: white;
+    margin-top: 1rem;
+}
+
+.collapsing {
+    margin-top: 1rem;
+}
+
+.offcanvas {
+    padding: 1.5rem;
+    background-color: white;
+    color: var(--primary)
+}
+
+.offcanvas-header {
+    padding: initial;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Custom components ---------- */
+
+/* ------- Buttons ------- */
+
+.btn-primary {
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    border-radius: var(--bs-border-radius);
+    background: var(--secondary);
+    color: var(--primary);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    align-items: center;
+    border: none;
+}
+
+.menu-btn {
+    display: flex;
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.btn-primary.outline {
+    background: none;
+    border: solid 3px var(--tertiary);
+    padding: 0 1rem;
+    color: var(--primary);
+}
+
+.btn-primary.text {
+    background: none;
+    padding: 0;
+    border: none;
+    color: var(--primary);
+}
+
+/* ------- Cards ------- */
+
+.card {
+    padding: 1.5rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    border-radius: 1rem;
+    color: var(--primary);
+    width: 100%;
+}
+
+.card>img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card>form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.counter {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.counter input {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border: 3px solid #ABABAB;
+    border-radius: 0.25rem;
+}
+
+.counter a {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    flex-direction: column;
+    align-items: center;
+    background: var(--accent);
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.disabled {
+    background: #F2F2F2 !important;
+    color: #666666;
+}
+
+/* ------- Icons ------- */
+
+.bi {
+    font-size: 1.5rem;
+}
+
+/* ------- Inputs ------- */
+
+.inp {
+    border-radius: 12px;
+    background: white;
+    width: 100%;
+    height: 3rem;
+    border: 3px solid var(--m-grey);
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+}
+
+/* ----------------- Extras ----------------- */
+
+.circle {
+    background: var(--accent);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.local-store {
+    display: flex;
+    justify-content: space-between;
+}

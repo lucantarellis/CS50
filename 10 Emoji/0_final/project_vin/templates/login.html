@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block main %}
+
+    <div class="cont-body form">
+        <div>
+            <form action="/login" method="post">
+                <h1>Ingresar a mi Vinbox</h1>
+                <div>
+                    <label class="sub" for="email">Email</label>
+                    <input id="email" type="text" value="" class="inp" name="email">
+                    <p class="helper">Ejemplo: nombre@email.com</p>
+                </div>
+                <div>
+                    <label class="sub" for="password">Contraseña</label>
+                    <input id="password" type="password" class="inp" name="password">
+                    <a style="color: white;" href="">Olvidé mi contraseña</a>
+                </div>
+                <button class="btn-primary" type="submit">Ingresar</button>
+            </form>
+        </div>
+        <div>
+            <p class="sub">¿No tenés cuenta?</p>
+            <a class="btn-primary outline" href="/register">Crear cuenta</a>
+        </div>
+    </div>
+
+{% endblock %}

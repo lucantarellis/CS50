@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registro
+{% endblock %}
+
+{% block main %}
+
+    <div class="cont-body form">
+        <form action="/login" method="post">
+            <h1>Crear cuenta</h1>
+            <div>
+                <label class="sub" for="email">Email</label>
+                <input id="email" type="text" value="" class="inp" name="email">
+                <p class="helper">Ejemplo: nombre@email.com</p>
+            </div>
+            <div>
+                <label class="sub" for="password">Contraseña</label>
+                <input id="password" type="password" class="inp" name="password">
+                <p class="helper"><b>Requisitos mínimos</b></p>
+                <ul>
+                    <li>Entre 8 y 24 caracteres</li>
+                    <li>Al menos un número</li>
+                    <li>Al menos una mayúscula</li>
+                </ul>
+            </div>
+            <div>
+                <label class="sub" for="confirmation">Repetí la contraseña</label>
+                <input id="confirmation" type="password" class="inp" name="confirmation">
+            </div>
+            <button class="btn-primary" type="submit">Crear cuenta</button>
+        </form>
+    </div>
+
+{% endblock %}

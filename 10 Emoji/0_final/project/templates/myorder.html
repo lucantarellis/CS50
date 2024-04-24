@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    my order
+{% endblock %}
+
+{% block main %}
+
+    <div class="cont-body bg">
+        <div>
+            <div>
+                <a href="/orders"><i id=back class="bi bi-arrow-left-short"></i> Go back</a>
+                <h1>Order # {{ order_id }}</h1>
+                <p>Date: {{ order_date }}</p>
+            </div>
+        </div>
+
+        <table class="table table-stripped">
+            <tr>
+                <th colspan="4">{{ order_name }}</th>
+            </tr>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+            </tr>
+            {% for order in order %}
+                <tr>
+                    <td>{{ order.product }}</td>
+                    <td>$ {{ order.price }}</td>
+                    <td>{{ order.qty }}</td>
+                    <td>$ {{ order.subtotal }}</td>
+                </tr>
+            {% endfor %}
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><b>Total:</b></td>
+                    <td><b>$ {{ total }}</b></td>
+                </tr>
+            </tfoot>
+        </table>
+
+{% endblock %}

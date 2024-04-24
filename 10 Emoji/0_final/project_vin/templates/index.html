@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="hero">
+        <h1>Estrenamos sitio con un <span style="text-decoration: underline;">lote de primera</span>, ¡No te lo pierdas!</h1>
+        <div>
+            <h2>Saint Felicien Bonarda</h2>
+            <img src="https://imgur.com/Q98rFmB.png" alt="">
+        </div>
+        <div>
+            <div>
+                <p>Quedan {{ stock_left }} cajas</p>
+                <div class="progress" role="progressbar" aria-label="prgress bar" aria-valuenow="{{ percentage }}" aria-valuemin="0%" aria-valuemax="100%">
+                    <div class="progress-bar" style="width: {{ percentage }}"></div>
+                </div>
+            </div>
+            <form class="home" action="/product" method="get">
+                <button class="btn-primary" type="submit" name="product_id" value="1">Ver lote</button>
+            </form>
+        </div>
+    </div>
+    <div class="hero_desk">
+        <div>
+            <h1>Estrenamos sitio con un <span style="text-decoration: underline;">lote de primera</span>, ¡No te lo pierdas!</h1>
+            <div>
+                <div>
+                    <p>Quedan {{ stock_left }} cajas</p>
+                    <div class="progress" role="progressbar" aria-label="prgress bar" aria-valuenow="{{ percentage }}" aria-valuemin="0%" aria-valuemax="100%">
+                        <div class="progress-bar" style="width: {{ percentage }}"></div>
+                    </div>
+                </div>
+                <form class="home" action="/product" method="get">
+                    <button class="btn-primary" type="submit" name="product_id" value="1">Ver lote</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <h2>Saint Felicien Bonarda</h2>
+            <img src="https://imgur.com/Q98rFmB.png" alt="">
+        </div>
+    </div>
+    <div class="divider">
+        <div>
+            <div>
+                <p class="circle">1</p>
+                <h3>Reservá</h3>
+            </div>
+            <p>Debido a que trabajamos con lotes de una cantidad determinada, basamos nuestro modelo en un sistema de reservas de cajas. ¡Podés reservar desde una caja en adelante!</p>
+        </div>
+        <div>
+            <div>
+                <p class="circle">2</p>
+                <h3>Completá el pago</h3>
+            </div>
+            <p>En el momento en el que el lote se completa, nosotros efectuaremos la compra. En ese momento se te contactará para completar el pago, al mismo precio de la reserva.</p>
+        </div>
+        <div>
+            <div>
+                <p class="circle">3</h4>
+                <h3>¡Recibí tus vinos!</h3>
+            </div>
+            <p>Pasados un rango de 2 a 8 días hábiles, recibirás tus cajas en tu domicilio. En caso de dudas podés consultar nuestras condiciones de entrega.</p>
+        </div>
+    </div>
+    <div class="cont-body">
+        <img id="contact_image" alt="" src="https://i.imgur.com/lIi0Xq9.png">
+        <div>
+            <div>
+                <h3>Suscribite a nuestra newsletter y enterate de los próximos lotes</h3>
+            </div>
+            <form action="/" method="post">
+                <div>
+                    <label class="sub" for="nombre">Email</label>
+                    <input id="nombre" type="text" class="inp" name="email">
+                    <p class="helper">Ejemplo: nombre@email.com</p>
+                </div>
+                <button class="btn-primary" type="submit">Suscribirme</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

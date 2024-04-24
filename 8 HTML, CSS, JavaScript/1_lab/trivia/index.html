@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Select all answer buttons
+                let ansButtons = document.querySelectorAll('#q1 button');
+                // TODO: Add code to check answers to questions
+                ansButtons.forEach(function(button) {
+                    button.addEventListener('click', function() {
+                        let selectedButton = this;
+                        // Check for correct answer
+                        if (selectedButton.id == 'a1') {
+                            selectedButton.style.backgroundColor = 'green';
+                            document.querySelector('#feedback').innerHTML = 'Correct!';
+                        }
+                        else {
+                            selectedButton.style.backgroundColor = 'red';
+                            document.querySelector('#feedback').innerHTML = 'Incorrect!';
+                        };
+                    });
+                });
+                // Check for open answer
+                let ans = document.querySelector('#rta');
+                let btn = document.querySelector('#submit');
+                btn.addEventListener('click', function() {
+                    if (ans.value == 'Encendedor' || ans.value == 'encendedor') {
+                        ans.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                    else {
+                        ans.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    };
+                });
+            });
+        </script>
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div id="q1" class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which of the following is considered a mammal?</h3>
+                <button id="a1">Whale</button>
+                <button id="a2">Snake</button>
+                <button id="a3">Frog</button>
+                <p id="feedback"></p>
+            </div>
+
+            <div id="q2" class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>How do you say 'lighter' in spanish?</h3>
+                <input type="text" id="rta"></input>
+                <button type="submit" id="submit">Submit answer</button>
+                <p id="feedback2"></p>
+            </div>
+            
+        </div>
+    </body>
+</html>

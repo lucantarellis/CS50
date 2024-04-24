@@ -1,0 +1,45 @@
+{% extends "layout-menuless.html" %}
+
+{% block title %}
+    Checkout
+{% endblock %}
+
+{% block main %}
+    <div class="cont-body bg">
+        <div>
+            <h1>Order details</h1>
+            <p>Make sure everything it's in order!</p>
+        </div>
+        <form id="check-table" action="/checkout" method="post">
+            <table class="table table-stripped">
+                <tr>
+                    <th colspan="4">{{ store }}</th>
+                </tr>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                </tr>
+                {% for order_product in order_products %}
+                    <tr>
+                        <td>{{ order_product.product }}</td>
+                        <td>$ {{ order_product.cents }}</td>
+                        <td>{{ order_product.qty }}</td>
+                        <td>$ {{ order_product.subtotal }}</td>
+                    </tr>
+                {% endfor %}
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b>Total:</b></td>
+                        <td><b>$ {{ order_total }}</b></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="btn-primary full" type="submit">Finish order</button>
+        </form>
+    </div>
+
+{% endblock %}

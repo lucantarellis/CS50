@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lote
+{% endblock %}
+
+{% block main %}
+    <div class="cont-body prod">
+        <div>
+            <h1>Lote n° {{ product_id }}</h1>
+            <h2>Saint Felicien Bonarda x 4u.</h2>
+        </div>
+        <div class="cont-centered">
+            <img src="https://i.imgur.com/mV5dJvT.png" href="#" alt="Saint Felicien Bonarda">
+            <div class="chip">
+                <p>$ 18.000 por caja</p>
+            </div>
+            <div>
+                <p><i class="bi bi-truck"></i> Envío incluido</p>
+            </div>
+        </div>
+        <div>
+            <p>Quedan {{ stock_left }} cajas</p>
+            <div class="progress" role="progressbar" aria-label="prgress bar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="10">
+                <div class="progress-bar" style="width: {{ percentage }}"></div>
+            </div>
+        </div>
+        <div>
+            <form class="qty" action="/checkout" method="get">
+                <div>
+                    <h3>Selecciona una cantidad</h3>
+                    <div>
+                        <input class="btn-check" id="una_caja" type="radio" name="cantidad" value="1" checked>
+                        <label class="btn-primary outline" for="una_caja">1 Caja</label>
+                        <input class="btn-check" id="dos_cajas" type="radio" name="cantidad" value="2">
+                        <label class="btn-primary outline" for="dos_cajas">2 Cajas</label>
+                    </div>
+                </div>
+                <button class="btn-primary" type="submit">Reservar</button>
+            </form>
+        </div>
+        <div class="info">
+            <h3>Ficha técnica</h3>
+            <p>Nos encanta el vino y por eso tratamos de brindarte toda la información de ellos.</p>
+            {% for wine in wine %}
+            <div>
+                <p><b>Nombre del vino</b></p>
+                <p>{{ wine.wine }}</p>
+            </div>
+            <div>
+                <p><b>Bodega</b></p>
+                <p>{{ wine.store }}</p>
+            </div>
+            <div>
+                <p><b>Añada</b></p>
+                <p>{{ wine.year }}</p>
+            </div>
+            <div>
+                <p><b>Varietal</b></p>
+                <p>{{ wine.variety }}</p>
+            </div>
+            <div>
+                <p><b>Origen</b></p>
+                <p>{{ wine.origin }}</p>
+            </div>
+            <div>
+                <p><b>Presentación</b></p>
+                <p>{{ wine.presentation }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="divider">
+        <h3>¿Cómo funciona?</h3>
+        <div>
+            <img src="https://i.imgur.com/fklL98q.png">
+            <div>
+                <h4>Reservá</h4>
+                <p>Debido a que trabajamos con lotes de una cantidad determinada, basamos nuestro modelo en un sistema de reservas de cajas. ¡Podés reservar desde una caja en adelante!</p>
+            </div>
+        </div>
+        <div>
+            <img src="https://i.imgur.com/5zUyoYh.png">
+            <div>
+                <h4>Completá el pago</h4>
+                <p>En el momento en el que el lote se completa, nosotros efectuaremos la compra. En ese momento se te contactará para completar el pago, al mismo precio de la reserva.</p>
+            </div>
+        </div>
+        <div>
+            <img src="https://i.imgur.com/ZJ4Cyeb.png">
+            <div>
+                <h4>¡Recibí tus vinos!</h4>
+                <p>Pasados un rango de 2 a 8 días hábiles, recibirás tus cajas en tu domicilio. En caso de dudas podés consultar nuestras condiciones de entrega.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

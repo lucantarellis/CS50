@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Perfil
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <h3>Información personal</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                </tr>
+                <tr>
+                    <th>Dirección</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ user_data.nombre }}</td>
+                    <td>{{ user_data.apellido }}</td>
+                </tr>
+                <tr>
+                    <td>{{ user_data.dirección }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3>Historial de reservas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Lote n°</th>
+                    <th>Vino</th>
+                    <th>Fecha</th>
+                    <th>Cantidad reservada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ user_historic.lote }}</td>
+                    <td>{{ user_historic.vino }}</td>
+                    <td>{{ user_historic.fecha }}</td>
+                    <td>{{ user_historic.cantidad }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

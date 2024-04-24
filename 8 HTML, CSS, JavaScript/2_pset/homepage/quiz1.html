@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en" style="background-color: #2B313B;">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sniglet&family=Sora:wght@600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Quizzerie</title>
+        <link rel="icon" type="image/x-icon" href="https://i.imgur.com/cYjDSda.png">
+        <script src="q1.js"></script>
+    </head>
+    <body>
+        <!--Navbar-->
+        <div class="nav">
+            <a href="https://lucantarellis-opulent-yodel-wq446xq95gwc56w5-8080.preview.app.github.dev/index.html">
+                <img class="img" src="https://i.imgur.com/R733bUY.png" alt="Quiz logo">
+            </a>
+        </div>
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://lucantarellis-opulent-yodel-wq446xq95gwc56w5-8080.preview.app.github.dev/index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Quiz 1</li>
+          </ol>
+        </nav>
+        <div id="q1">
+            <h5>1. What kind of fish is Nemo?</h5>
+            <div data-answer>
+                <div class="form-check">
+                    <input id="opt1" value="option1" name="q1Radio" class="form-check-input" type="radio">
+                    <label class="form-check-label" for="opt1">
+                      Fish
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="opt2" value="option2" name="q1Radio" class="form-check-input" type="radio">
+                    <label class="form-check-label" for="opt2">
+                      Shark
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="opt3" value="option3" name="q1Radio" class="form-check-input" type="radio">
+                    <label class="form-check-label" for="opt3">
+                      Whale
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="opt4" value="option4" name="q1Radio" class="form-check-input" type="radio">
+                    <label class="form-check-label" for="opt4">
+                      Clownfish
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="q2">
+            <h5>2. What is the only animal that can’t jump?</h5>
+            <div data-answer>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="cardImg ans" alt="A Lion in the savanna">
+                    <div class="card-body">
+                      <input type="radio" class="btn-check" name="q2Btn" id="2opt1">
+                      <label class="btn btn-primary" for="2opt1">Lion</label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1588889723935-38872d4bc4b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80" class="cardImg ans" alt="A gorilla in the jungle">
+                    <div class="card-body">
+                        <input type="radio" class="btn-check" name="q2Btn" id="2opt2">
+                        <label class="btn btn-primary" for="2opt2">Gorilla</label>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1581852017103-68ac65514cf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" class="cardImg ans" alt="An elephan walking">
+                    <div class="card-body">
+                        <input type="radio" class="btn-check" name="q2Btn" id="2opt3">
+                        <label class="btn btn-primary" for="2opt3">Elephant</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="q3">
+            <h5>3. What is the name of the biggest shark?</h5>
+            <div class="input-group">
+                <span class="input-group-text" id="inputq3">Answer</span>
+                <input type="text" class="form-control" aria-label="Input q3" aria-describedby="q3">
+            </div>
+        </div>
+        <div id="q4">
+            <h5>4. Which animal is the tallest in the world?</h5>
+            <div class="input-group">
+                <span class="input-group-text" id="inputq4">Answer</span>
+                <input type="text" class="form-control" aria-label="Input q4" aria-describedby="q4">
+            </div>
+        </div>
+        <div>
+            <button id="submit" type="submit" class="btn btn-primary" data-btnCard>Submit</button>
+        </div>
+    </body>
+</html>

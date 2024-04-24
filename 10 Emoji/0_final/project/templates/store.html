@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ store_name }}'s store
+{% endblock %}
+
+{% block main %}
+    <div class="cont-body bg">
+        <div>
+            <div>
+                <a href="/local-stores"><i id=back class="bi bi-arrow-left-short"></i> Go back</a>
+                <h1>{{ store_name }}</h1>
+            </div>
+            <p>Look through the products, add the amount you want for each of them and submit the order at the end of the page.</p>
+        </div>
+        <form class="prod-list" action="/store" method="post">
+            {% for product in products %}
+                <div class="card-prod">
+                    <div>
+                        <p>{{ product.product }} (kg.)</p>
+                        <input type="hidden" value="{{ product.id }}" name="product">
+                        <p>$ {{ product.cents / 100 }} / kg.</p>
+                        <input type="hidden" value="{{ product.cents / 100 }}" name="price">
+                    </div>
+                    <div class="counter">
+                        <a onClick="decreaseCount(event, this)" class="disabled">-</a>
+                        <input type="text" placeholder="0" value="0" name="qty" readonly>
+                        <a onClick="increaseCount(event, this)">+</a>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="divider section">
+                <h4 id="total-price">Total: $ 0.00</h4>
+            </div>
+            <button class="btn-primary full" type="submit" name="store_id" value="{{ store_id }}">Continue to checkout</button>
+        </form>
+    </div>
+{% endblock %}

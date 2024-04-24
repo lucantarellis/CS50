@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    bodegas
+{% endblock %}
+
+{% block main %}
+
+    <div class="card">
+        <form>
+            <div>
+                <h3>Quiero ser parte de Vinbox</h3>
+                <p>Envianos el siguiente formulario y te contactaremos al a brevedad.</p>
+            </div>
+            <div>
+                <div>
+                    <label class="sub" for="nombre">Nombre (Opcional)</label>
+                    <input id="nombre" type="text" value="" class="inp" name="nombre">
+                </div>
+                <div>
+                    <label class="sub" for="email">Email</label>
+                    <input id="email" type="text" value="" class="inp" name="email">
+                </div>
+            </div>
+            <div>
+                <label class="sub" for="msg">Mensaje</label>
+                <input id="msg" type="text" value="" class="inp lg" name="msg">
+            </div>
+            <button class="btn-primary dark">Contactar</button>
+        </form>
+    </div>
+
+{% endblock %}

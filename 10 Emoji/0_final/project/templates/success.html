@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Order confirmation
+{% endblock %}
+
+{% block main %}
+
+    <div class="cont-body bg">
+        <div>
+            <h1>Thank you!</h1>
+        </div>
+        <div class="card">
+            <p>Your <b>Order #{{ order_id }}</b> has been sent to <b>{{ store }}</b> successfully.</p>
+            <p>Shortly, you will receive an email with the confirmation number to pick up your products.</p>
+            <a class="btn-primary full" href="/">Go to Home</a>
+        </div>
+    </div>
+
+{% endblock %}

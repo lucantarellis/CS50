@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Historic
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Name</th>
+                <th class="text-start">Price</th>
+                <th class="text-end">Transaction type</th>
+                <th class="text-end">Quantity</th>
+                <th class="text-end">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for historic_table in historic_table %}
+            <tr>
+                <td class="text-start">{{ historic_table.stock_name }}</td>
+                <td class="text-start">{{ historic_table.price | usd }}</td>
+                <td class="text-end">{{ historic_table.quantity }}</td>
+                <td class="text-end">{{ historic_table.transaction_type }}</td>
+                <td class="text-end">{{ historic_table.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

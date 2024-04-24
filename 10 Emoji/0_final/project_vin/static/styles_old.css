@@ -1,0 +1,82 @@
+/* prueba de curvatura */
+.box {
+    --mask:
+      radial-gradient(4.47rem at 50% 6.00rem,#000 99%,#0000 101%) calc(50% - 4rem) 0/8rem 51% repeat-x,
+      radial-gradient(4.47rem at 50% -4rem,#0000 99%,#000 101%) 50% 2rem/8rem calc(51% - 2rem) repeat-x,
+      radial-gradient(4.47rem at 50% calc(100% - 6.00rem),#000 99%,#0000 101%) calc(50% - 4rem) 100%/8rem 51% repeat-x,
+      radial-gradient(4.47rem at 50% calc(100% + 4.00rem),#0000 99%,#000 101%) 50% calc(100% - 2rem)/8rem calc(51% - 2rem) repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    background-image: url("https://i.imgur.com/QDIfLr0.png");
+    background-position: top;
+    padding: 2.5rem 1.5rem 0 1.5rem;
+}
+
+/* -- Quantity counter component -- */
+
+.qty-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.qty-counter a {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 2px inset #036564;
+  background: #06C1BF;
+  color: #022836;
+}
+
+.qty-counter a:disabled {
+  box-shadow: 0 0 0 2px inset #6F6F6F;
+  background: #EBEBEB;
+  color: #6E6E6E;
+}
+
+.qty-counter input {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #FFF;
+}
+
+/* -- Price tag component --*/
+
+.price-tag {
+  display: inline-flex;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: white;
+  color: var(--primary);
+}
+
+/* -- Shipping component -- */
+
+.shipping {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.p-small {
+  color: white;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  margin-bottom: 1.5rem;
+}
