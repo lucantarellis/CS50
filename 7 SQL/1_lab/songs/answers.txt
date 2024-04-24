@@ -1,0 +1,2 @@
+To characterize the aura we would need to determine the average of the several song's stats. Then compare them to the color table and define which colors does the aura contains, based on the playlist.
+Characterize the aura based on 100 songs could lead to a result that does not represent the actual taste of the listener. I would suggest first to define and use a period of time that is consistent. Secondly, I woud compare the length of time that the listener invested using spotify versus the previous defined period of time.

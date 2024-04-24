@@ -1,0 +1,16 @@
++----+---------------+-----------------------------------------+
+| id |     city      |                full_name                |
++----+---------------+-----------------------------------------+
+| 1  | Chicago       | O'Hare International Airport            |
+| 2  | Beijing       | Beijing Capital International Airport   |
+| 3  | Los Angeles   | Los Angeles International Airport       |
+| 4  | New York City | LaGuardia Airport                       |
+| 5  | Dallas        | Dallas/Fort Worth International Airport |
+| 6  | Boston        | Logan International Airport             |
+| 7  | Dubai         | Dubai International Airport             |
+| 8  | Fiftyville    | Fiftyville Regional Airport             |
+| 9  | Tokyo         | Tokyo International Airport             |
+| 10 | Paris         | Charles de Gaulle Airport               |
+| 11 | San Francisco | San Francisco International Airport     |
+| 12 | Delhi         | Indira Gandhi International Airport     |
++----+---------------+-----------------------------------------+
