@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: it only shows an advantage when dealing with the sorted list, so O must be different to omega
+
+sort2 uses: merge sort
+
+How do you know?: it's average is very good on big files, and when we use the sorted.txt it shows it's great performance.
+
+sort3 uses: selection sort
+
+How do you know?: all files took aproximately the same, so O and omega must be equal. Hence taking the same time on average.
